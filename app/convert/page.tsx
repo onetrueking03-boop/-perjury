@@ -23,11 +23,15 @@ export default function ConvertPage() {
 
     const res = await fetch("/api/convert", { method: "POST", body: fd });
     if (!res.ok) {
-      const text = await res.text();
-      setLoading(false);
-      alert(text);
-      return;
-    }
+    let msg = "Conversion is unavailable right now.";
+    try {
+      const j = await res.json();
+      if (j?.message) msg = j.message;
+    } catch {}
+    setLoading(false);
+    alert(msg);
+    return;
+  }
 
     const blob = await res.blob();
     setGifUrl(URL.createObjectURL(blob));
