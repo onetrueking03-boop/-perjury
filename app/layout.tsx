@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Blakk Gifs",
-    template: "%s | Blakk Gifs",
+    default: "Perjury Gifs",
+    template: "%s | Perjury Gifs",
   },
   description: "Premium Discord drops and booster-only tools.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 };
 
