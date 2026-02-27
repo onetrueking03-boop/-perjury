@@ -149,18 +149,18 @@ export default function Shell({ children }: { children: React.ReactNode }) {
               </div>
 
               <div className="leading-tight">
-                {/* Use your existing gradient logo class if you have it; otherwise this is fine */}
                 <div className="logo-text text-[18px] md:text-[20px] font-black tracking-wide">
                   {serverName}
                 </div>
-                <div className="text-[11px] text-white/55 -mt-1">
-                  discord customization toolkit
-                </div>
+                <div className="text-[11px] text-white/55 -mt-1">discord customization toolkit</div>
               </div>
             </Link>
 
             {/* NAV */}
             <nav className="hidden md:flex items-center gap-1">
+              {/* ✅ ADDED THIS */}
+              <NavLink href="/effects">Effects</NavLink>
+
               <NavLink href="/search">Search</NavLink>
               <NavLink href="/convert">Convert</NavLink>
               <NavLink href="/filter">Filter</NavLink>
@@ -169,11 +169,12 @@ export default function Shell({ children }: { children: React.ReactNode }) {
 
             {/* CTA */}
             <div className="flex items-center gap-2">
+              {/* ✅ OPTIONAL: make CTA go to Effects */}
               <Link
-                href="/search"
+                href="/effects"
                 className="px-4 py-2 rounded-xl bg-fuchsia-500/90 hover:bg-fuchsia-400 text-sm font-semibold transition neon-btn"
               >
-                Get Started
+                Profile Effects
               </Link>
             </div>
           </div>
@@ -184,7 +185,9 @@ export default function Shell({ children }: { children: React.ReactNode }) {
 
       <footer className="mx-auto max-w-6xl px-4 pb-10 text-xs text-white/45">
         <div className="glass rounded-2xl p-4 flex items-center justify-between">
-          <div>© {new Date().getFullYear()} {serverName}</div>
+          <div>
+            © {new Date().getFullYear()} {serverName}
+          </div>
           <div className="text-white/35">Neon • Glass • Fast</div>
         </div>
       </footer>
