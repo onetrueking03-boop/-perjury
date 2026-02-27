@@ -20,7 +20,7 @@ export const metadata = {
   },
   description: "Premium Discord drops and booster-only tools.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
 };
 
